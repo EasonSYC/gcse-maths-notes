@@ -1,0 +1,140 @@
+%!TEX TX-program = xelatex
+%
+%%%%%%%%%%%%%%%%%%%%
+%
+% Title: GCSE Mathematics & Additional Mathematics for 16.08.22
+% Author: Eason Shao, Mr Finch-Noyes
+% Date: 16.08.22
+% Institude: Oxford International College
+% Email: eason.syc@icloud.com; yicheng_shao@oxcoll.com
+% GitHub: https://github.com/EasonSYC
+% GitHub Repository: N/A
+%
+%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[8pt]{article}
+\usepackage{../allan-eason}
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+
+\graphicspath{ {./images/} }
+
+\newcommand{\Date}{16.08.22}
+\newcommand{\Name}{Mathematics}
+\newcommand{\Title}{\textcolor{allandarkblue}{\Name}\ \textcolor{allancyan}{\Date}\ Notes}
+
+\newcommand{\Author}{Eason Shao, Mr Finch-Noyes}
+
+\author{\Author}
+\title{\Title}
+\date{\Date}
+
+\geometry{a4paper, scale=0.8}
+
+\lhead{\Title}
+
+\begin{document}
+
+	\maketitle
+
+	\tableofcontents
+
+	\section{General Introduction of the Course}
+		\intr \intrword{(Course Structure)}
+		
+		\begin{enumerate}[label=\intrword{(\arabic*)}]
+			\item IGCSE Maths, CIE, 0580, A*-E;
+			\item IGCSE Additional Maths, CIE, 0606, A*-E.
+		\end{enumerate}
+
+		\intr \intrword{(Maths)} Core and Extended, Aug - Oct.
+		
+		\begin{enumerate}[label=\intrword{(\arabic*)}]
+			\item Paper 2: 90 mins, 70 pts, 23 Short Qs;
+			\item Paper 4: 150 mins, 130 pts, 12 Longer Qs.
+		\end{enumerate}
+
+		\intr \intrword{(Additional Maths)} Nov - Mar.
+		
+		\begin{enumerate}[label=\intrword{(\arabic*)}]
+			\item Paper 1: 120 mins, 80 pts;
+			\item Paper 2: 120 mins, 80 pts.
+		\end{enumerate}
+
+		\intr \intrword{(Important Documents)} Syllabus (Changed in 2020 and 2022); 2017- Practice Problems.
+
+		\intr \intrword{(Curriculum)} Number 15-20\%, Algebra 35-40\%, Geometry 30-35\%, Stat/Prob 10-15\%.
+
+	\section{Numbers}
+		\defi \defiword{(Integers)} \(\cdots, -3, -2, -1, 0, 1, 2, 3, \cdots\). All whole numbers including \(0\). Symbol: \(\ZZ\).
+
+		\defi \defiword{(Natural Numbers)} \(1, 2, 3, \cdots\). All positive whole mumbers without \(0\). Symbol: \(\NN \lgor \ZZ^{+}\).
+
+		\defi \defiword{(Rational Numbers)} Can be written as \(\frac{a}{b}\) where \(a, b \in \ZZ\). Any number with termintating or repeating decimals. Symbol: \(\QQ\).
+
+		\defi \defiword{(Irrational Numbers)} Real numbers excluding rational numbers.
+		
+		\exmp \exmpword{(Irrational Numbers)} \(\pi, \sqrt{2}, \sqrt{3}, \sqrt{9.2}, \sqrt[5]{19}, \ee\).
+
+		\defi \defiword{(Real Numbers)} All numbers. Symbol: \(\RR\).
+
+		\defi \defiword{(Factors)} Factors of a number \(n\): \(a\) where \(\frac{n}{a} \in \NN\).
+		
+		\exmp \exmpword{(Factors)} Factors of \(12\): \(1, 2, 3, 4, 6, 12\).
+
+		\defi \defiword{(Multiples)} Multiples of a number \(n\): \(an\) where \(a \in \NN\).
+		
+		\exmp \exmpword{(Multiples)} Multiples of \(12\): \(12, 24, 36, \cdots\).
+
+		\defi \defiword{(Prime Numbers)} \(2, 3, 5, 7, 11, \cdots\). Exactly two factors.
+
+		\meth \methword{(Determine whether a number \(n\) is Prime)} Check every Prime up to \(\sqrt{n}\).\newline
+
+		\prob Determine whether \(149\) is a prime.
+		
+		\solution \(\sqrt{149} \approx 12.02,\) check \(2, 3, 5, 7, 11\).
+		
+		\begin{enumerate}[label=\methword{(\arabic*)}]
+			\item \(149 \equiv 1\ (\mathrm{mod}\ 2)\),
+			\item \(149 \equiv 2\ (\mathrm{mod}\ 3)\),
+			\item \(149 \equiv 4\ (\mathrm{mod}\ 5)\),
+			\item \(149 \equiv 2\ (\mathrm{mod}\ 7)\),
+			\item \(149 \equiv 6\ (\mathrm{mod}\ 11)\). 
+		\end{enumerate}
+
+		Therefore \(149\) is a prime.\newline
+
+		\defi \defiword{(Reciprocal)}: Reciprocal of a non-zero number \(n\) is \(\frac{1}{n}\).
+
+		\meth \methword{(Highest Common Factor, HCF)} Factorization. Do a Venn Diagram of factors. Multiple ONLY the common factors.\newline
+		
+		\prob Find the HCF of \(156\) and \(72\).
+		
+		\solution 
+		
+		\begin{align*}
+			156 &= 2 \times 78\\
+			    &= 2 \times 2 \times 39\\
+				&= 2 \times 2 \times 3 \times 13\\
+				&= 2^2 \times 3 \times 13;\\
+			72 &= 2 \times 36\\
+			   &= 2 \times 2 \times 18\\
+			   &= 2 \times 2 \times 2 \times 9\\
+			   &= 2 \times 2 \times 2 \times 3 \times 3\\
+			   &= 2^3 \times 3^2.
+		\end{align*}
+
+		Common Factors: \(2^2, 3\); \(156\)-Only Factors: \(13\); \(72\)-Only Factors: \(2, 3\).
+
+		\(\mathrm{hcf}(156, 72) = 2^2 \times 3 = 12\).\newline
+
+		\meth \methword{(Least Common Multiple, LCM)} Factorization. Do a Venn Diagram of factors. Multiple ALL factors (only multiple the common ones once).\newline
+		
+		\prob Find the LCM of \(156\) and \(72\).
+		
+		\solution Common Factors: \(2^2, 3\); \(156\)-Only Factors: \(13\); \(72\)-Only Factors: \(2, 3\).
+		
+		\(\mathrm{lcm}(156, 72)=2^3 \times 3^2 \times 13 = 936\).
+
+\end{document}

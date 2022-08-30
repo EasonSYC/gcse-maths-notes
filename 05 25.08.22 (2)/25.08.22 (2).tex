@@ -1,0 +1,202 @@
+%!TEX TX-program = xelatex
+%
+%%%%%%%%%%%%%%%%%%%%
+%
+% Title: GCSE Mathematics & Additional Mathematics for 25.08.22 (2)
+% Author: Eason Shao, Mr Finch-Noyes
+% Date: 25.08.22 (2)
+% Institude: Oxford International College
+% Email: eason.syc@icloud.com; yicheng_shao@oxcoll.com
+% GitHub: https://github.com/EasonSYC
+% GitHub Repository: N/A
+%
+%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[8pt]{article}
+\usepackage{../allan-eason}
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+
+\graphicspath{ {./images/} }
+
+\newcommand{\Date}{25.08.22 (2)}
+\newcommand{\Name}{Mathematics}
+\newcommand{\Title}{\textcolor{allandarkblue}{\Name}\ \textcolor{allancyan}{\Date}\ Notes}
+
+\newcommand{\Author}{Eason Shao, Mr Finch-Noyes}
+
+\author{\Author}
+\title{\Title}
+\date{\Date}
+
+\geometry{a4paper, scale=0.8}
+
+\lhead{\Title}
+
+\begin{document}
+
+	\maketitle
+
+	\tableofcontents
+
+	\section{Money Conversion}
+
+		\exmp \exmpword{(Money Conversion)} \(\mathrm{Euro} 1 = \pounds 0.84 = \mathrm{s}\$1.39\). \(\mathrm{Euro} 29.04\) to \(\pounds\): \(24.39 \pounds\). \(\mathrm{s}\$ 74.08\) to Euros: \(\mathrm{Euro} 53.29\). \(\pounds 90\) to \(\mathrm{s}\$\): \(\mathrm{s}\$148.93\).
+
+	\section{Ratio}
+
+		\exmp \exmpword{(Ratio)} \(\$3600\) is shared in the ratio \(4:6:8\).
+
+		\begin{enumerate}[label=\exmpword{(\arabic*)}]
+			\item Can we simplify this ratio? \(4:6:8=2:3:4\).
+			\item What does each person get? Each part is \(\$3600 \div (2+3+4) = \$400\). \(\$400 \times 2 = \$800, \$400 \times 3 = \$1200, \$400 \times 4 = \$1600.\)
+			\item What fraction does the lowest share get? \(\frac{2}{2+3+4} = \frac{2}{9}\).
+		\end{enumerate}
+
+		\prob Money is shared in ratio \(1:5\). If the smaller share is \(\pounds 40\), what is the total share?
+
+		\solution \(\pounds 40 \div 1 \times (1 + 5) = \pounds 240\).
+
+	\section{Graphs}
+
+		\exmp \exmpword{(Displacement-Time Graph)} Describe the movement of the object.
+
+		\[
+			\begin{tikzpicture}[scale = 0.25]
+				\draw [black, thick] (0, 0)--(10, 20)--(15, 20)--(18, -10)--(23, -10)--(28, 0);
+				\draw [black, ->] (-5, 0)--(35, 0) node[below] {Time \((\unit{\second})\)};
+				\draw [black, ->] (0, -15)--(0, 25) node[right] {Displacement \((\unit{\metre})\)};
+				\draw [black, dashed] (10, 20)--(0, 20) node [left] {\(20\)};
+				\draw [black, dashed] (18, -10)--(0, -10) node [left] {\(-10\)};
+				\draw [black, dashed] (10, 20)--(10, 0) node [below] {\(10\)};
+				\draw [black, dashed] (15, 20)--(15, 0) node [below] {\(15\)};
+				\draw [black, dashed] (18, -10)--(18, 0) node [above] {\(18\)};
+				\draw [black, dashed] (23, -10)--(23, 0) node [above] {\(23\)};
+				\node at (28, 0) [above] {\(28\)};
+				\node at (0, 0) [anchor = south east] {\(O\)};
+			\end{tikzpicture}
+		\]
+
+		\begin{center}
+			\begin{tabular}{c|c|c}
+				Time & Direction & Velocity\\
+				\hline\hline
+				\(0 - 10\) & Positive & \(\qty{20}{\metre\per\second}\)\\
+				\hline
+				\(10 - 15\) & At Rest & \(0\)\\
+				\hline
+				\(15 - 18\) & Negative & \(\qty{-10}{\metre\per\second}\)\\
+				\hline
+				\(18 - 23\) & At Rest & \(0\)\\
+				\hline
+				\(23 - 28\) & Positive & \(\qty{2}{\metre\per\second}\)
+			\end{tabular}
+		\end{center}
+
+		\exmp \exmpword{(Velocity-Time Graph)} Draw the Velocity-Time Graph of this motion.
+
+		\[
+			\begin{tikzpicture}[scale = 0.25]
+				\draw [black, ->] (-5, 0)--(35, 0) node[below] {Time \((\unit{\second})\)};
+				\draw [black, ->] (0, -15)--(0, 5) node[right] {Velocity \((\unit{\metre\per\second})\)};
+				\draw [black, thick] (0, 2)--(10, 2);
+				\draw [black, thick] (10, 0)--(15, 0);
+				\draw [black, thick] (15, -10)--(18, -10);
+				\draw [black, thick] (18, 0)--(23, 0);
+				\draw [black, thick] (23, 2)--(28, 2);
+				\node at (10, 0) [below] {\(10\)};
+				\node at (15, 0) [above] {\(15\)};
+				\node at (18, 0) [above] {\(18\)};
+				\node at (23, 0) [below] {\(23\)};
+				\node at (28, 0) [below] {\(28\)};
+				\node at (0, 0) [anchor = north east] {\(O\)};
+				\draw [black, dashed] (15, -10)--(0, -10) node [left] {\(-10\)};
+				\node at (0, 2) [left] {\(2\)};
+				\draw [black, dashed] (10, 2)--(10, 0);
+				\draw [black, dashed] (15, 0)--(15, -10);
+				\draw [black, dashed] (18, -10)--(18, 0);
+				\draw [black, dashed] (23, 0)--(23, 2);
+				\draw [black, dashed] (28, 2)--(28, 0);
+			\end{tikzpicture}
+		\]
+
+		\defi \defiword{(Average Velocity, Average Speed)}
+
+		\[\text{Average Velocity} = \frac{\text{Total Displacement}}{\text{Total Time}},\]
+
+		\[\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}}.\]
+
+		\exmp \exmpword{(Average Velocity, Average Speed)} Calculate the Average Velocity and Average Speed of the previous example.
+		
+		\[\text{Average Velocity} = \frac{\text{Total Displacement}}{\text{Total Time}} = \frac{\qty{0}{\metre}}{\qty{28}{\second}} = 0,\]
+		
+		\[\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} = \frac{\qty{60}{\metre}}{\qty{28}{\second}} = \qty{2.14}{\metre\per\second}.\]
+
+		\exmp \exmpword{(Velocity-Time Graph)} Describe the movement of the object.
+
+		\[
+			\begin{tikzpicture}[scale = 0.25]
+				\draw [black, thick] (0, 0)--(10, 12)--(15, 12)--(17, 0)--(20, 0)--(22, -10)--(30, 0);
+				\draw [black, ->] (-5, 0)--(35, 0) node[below] {Time \((\unit{\second})\)};
+				\draw [black, ->] (0, -15)--(0, 17) node[right] {Velocity \((\unit{\metre\per\second})\)};
+				\draw [black, dashed] (10, 12)--(0, 12) node [left] {\(12\)};
+				\draw [black, dashed] (22, -10)--(0, -10) node [left] {\(-10\)};
+				\draw [black, dashed] (10, 12)--(10, 0) node [below] {\(10\)};
+				\draw [black, dashed] (15, 12)--(15, 0) node [below] {\(15\)};
+				\draw [black, dashed] (22, -10)--(22, 0) node [above] {\(22\)};
+				\node at (17, 0) [below] {\(17\)};
+				\node at (20, 0) [above] {\(20\)};
+				\node at (30, 0) [above] {\(30\)};
+				\node at (0, 0) [anchor = south east] {\(O\)};
+			\end{tikzpicture}
+		\]
+
+		\begin{center}
+			\begin{tabular}{c|c|c|c|c}
+				Time & Direction of Movement & Velocity & Direction of Acceleration & Acceleration\\
+				\hline\hline
+				\(0-10\) & Positive & N/A & Positive & \(\qty{1.2}{\metre\per\second\squared}\)\\
+				\hline
+				\(10-15\) & Positive & \(\qty{12}{\metre\per\second}\) & Zero & \(0\)\\
+				\hline
+				\(15-17\) & Positive & N/A & Negative & \(\qty{-6}{\metre\per\second\squared}\)\\
+				\hline
+				\(17-20\) & At Rest & \(0\) & Zero & \(0\)\\
+				\hline
+				\(20-22\) & Negative & N/A & Negative & \(\qty{-5}{\metre\per\second\squared}\)\\
+				\hline
+				\(22-30\) & Negative & N/A & Positive & \(\qty{1.25}{\metre\per\second\squared}\)
+			\end{tabular}
+		\end{center}
+
+		\meth \methword{(Calculating Displacement/Distance via a Veloity/Speed Graph)}
+
+		\begin{align*}
+			S &= \int \diff S\\
+			  &= \int v \diff t,
+		\end{align*}
+
+		therefore the Displacement/Distance is the area below the Veloity/Speed curve.
+
+		\exmp \exmpword{(Calculating Displacement/Distance via a Veloity/Speed Graph)} Calculate the displacement and the distance of the previous example.
+
+		\begin{align*}
+			\text{Displacement} &= \qty{10}{\second} \times \qty{12}{\metre\per\second} \times \frac{1}{2} + \qty{5}{\second} \times \qty{12}{\metre\per\second} + \qty{2}{\second} \times \qty{12}{\metre\per \second} \times \frac{1}{2}\\
+			&+ \qty{2}{\second} \times \qty{-10}{\metre\per\second} \times \frac{1}{2} + \qty{8}{\second} \times \qty{-10}{\metre\per\second} \times \frac{1}{2}\\
+			&= \qty{82}{\metre}.
+		\end{align*}
+
+		\begin{align*}
+			\text{Distance} &= \qty{10}{\second} \times \qty{12}{\metre\per\second} \times \frac{1}{2} + \qty{5}{\second} \times \qty{12}{\metre\per\second} + \qty{2}{\second} \times \qty{12}{\metre\per \second} \times \frac{1}{2}\\
+			&+ \qty{2}{\second} \times \qty{10}{\metre\per\second} \times \frac{1}{2} + \qty{8}{\second} \times \qty{10}{\metre\per\second} \times \frac{1}{2}\\
+			&= \qty{182}{\metre}.
+		\end{align*}
+
+		\exmp \exmpword{(Calculating Average Velocity/Speed)}
+
+		\[\text{Average Velocity} = \frac{\text{Total Displacement}}{\text{Total Time}} = \frac{\qty{82}{\metre}}{\qty{30}{\second}},\]
+
+		\[\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} = \frac{\qty{182}{\metre}}{\qty{30}{\second}}.\]
+
+\end{document}

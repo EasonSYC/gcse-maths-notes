@@ -1,0 +1,325 @@
+%!TEX TX-program = xelatex
+%
+%%%%%%%%%%%%%%%%%%%%
+%
+% Title: GCSE Mathematics & Additional Mathematics for 18.08.22 (1)
+% Author: Eason Shao, Mr Finch-Noyes
+% Date: 18.08.22 (1)
+% Institude: Oxford International College
+% Email: eason.syc@icloud.com; yicheng_shao@oxcoll.com
+% GitHub: https://github.com/EasonSYC
+% GitHub Repository: N/A
+%
+%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[8pt]{article}
+\usepackage{../allan-eason}
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+
+\graphicspath{ {./images/} }
+
+\newcommand{\Date}{18.08.22 (1)}
+\newcommand{\Name}{Mathematics}
+\newcommand{\Title}{\textcolor{allandarkblue}{\Name}\ \textcolor{allancyan}{\Date}\ Notes}
+
+\newcommand{\Author}{Eason Shao, Mr Finch-Noyes}
+
+\author{\Author}
+\title{\Title}
+\date{\Date}
+
+\geometry{a4paper, scale=0.8}
+
+\lhead{\Title}
+
+\begin{document}
+
+	\maketitle
+
+	\tableofcontents
+
+	\section{Revision}
+
+		\subsection{Numbers}
+
+			\prob Determine whether \(-3\) is in \(\NN, \ZZ, \QQ, \RR\).
+			
+			\solution \(-3 \notin \NN, -3 \in \ZZ, -3 \in \QQ, -3 \in \RR\).\newline
+
+			\prob Prove that \(7.385 \in \QQ\).
+
+			\solution \(7.385 = 7385/1000\).\newline
+
+			\prob Prove that \(0.\dot{7}1\dot{5} \in \QQ\).
+			
+			\solution \(0.\dot{7}1\dot{5} = 715/999\).
+
+		\subsection{Factorization, lcms and hcfs}
+
+			\prob Factorize \(432\).
+			
+			\solution
+			
+			\begin{align*}
+				432 &= 2 \times 216\\
+				    &= 2^2 \times 108\\
+					&= 2^3 \times 54\\
+					&= 2^4 \times 27\\
+					&= 2^4 \times 3 \times 9\\
+					&= 2^4 \times 3^2 \times 3\\
+					&= 2^4 \times 3^3.
+			\end{align*}
+
+			Therefore \(432 = 2^4 \times 3^3\). \newline
+
+			\prob Factorize \(900\).
+			
+			\solution
+			
+			\begin{align*}
+				900 &= 2 \times 450\\
+				    &= 2^2 \times 225\\
+					&= 2^2 \times 3 \times 75\\
+					&= 2^2 \times 3^2 \times 25\\
+					&= 2^2 \times 3^2 \times 5^2.
+			\end{align*}
+
+			Therefore \(900 = 2^2 \times 3^2 \times 5^2\). \newline
+
+			\prob Calculate the HCF of \(432\) and \(900\).
+			
+			\solution Common factors: \(2^2, 3^2\). \(432\)-Only factors: \(2^2, 3\). \(900\)-Only factors: \(5^2\).
+			
+			\(\mathrm{hcf}(432, 900) = 2^2 \times 3^2 = 36\). \newline
+
+			\prob Calculate the LCM of \(432\) and \(900\).
+			
+			\solution Common factors: \(2^2, 3^2\). \(432\)-Only factors: \(2^2, 3\). \(900\)-Only factors: \(5^2\).
+			
+			\(\mathrm{lcm}(432, 900) = 2^4 \times 3^3 \times 5^2 = 10800\).
+
+	\section{Fractions}
+
+		\subsection{Fraction Calculation}
+
+			\exmp \exmpword{(Faction Calculation)} 
+			
+			\begin{align*}
+				\frac{a}{432} - \frac{b^2}{900} &\xlongequal[\times \text{Other-Only Factor}]{\text{LCM Common Denominator}} \frac{a \cdot 5^2}{10800} - \frac{b^2 \cdot 2^2 \cdot 3}{10800}\\
+				&= \frac{25a - 12b^2}{10800}.
+			\end{align*}
+
+			\prob Simplify
+			
+			\[\frac{a}{c} \times b - \frac{e}{3f}.\]
+
+			\solution
+
+			\begin{align*}
+				\frac{a}{c} \times b - \frac{e}{3f} &= \frac{ab}{c} - \frac{e}{3f}\\
+				&= \frac{3abf}{3cf} - \frac{ce}{3cf}\\
+				&= \frac{3abf-ce}{3cf}.
+			\end{align*}
+			
+			\prob Simplify
+			
+			\[\frac{b}{8e} \div \frac{2a}{c}.\]
+
+			\solution
+			
+			\begin{align*}
+				\frac{b}{8e} \div \frac{2a}{c} &= \frac{b}{8e} \times \frac{c}{2a}\\
+				&= \frac{bc}{16ae}.
+			\end{align*}
+
+			\prob Simplify
+			
+			\[4 - \frac{3}{a}.\]
+
+			\solution
+			
+			\begin{align*}
+				4 - \frac{3}{a} &= \frac{4a}{a} - \frac{3}{a}\\
+				                &= \frac{4a-3}{a}.
+			\end{align*}
+			
+			\prob Simplify
+
+			\[\frac{8}{3} \div 7a.\]
+
+			\solution
+			
+			\begin{align*}
+				\frac{8}{3} \div 7a &= \frac{8}{3} \times \frac{1}{7a}\\
+				&= \frac{8}{21a}.
+			\end{align*}
+
+			\prob Simplify
+			
+			\[3c \div \frac{276}{e^5}.\]
+
+			\solution
+
+			\begin{align*}
+				3c \div \frac{276}{e^5} &= 3c \times \frac{e^5}{276}\\
+				&= \frac{3ce^5}{276}\\
+				&= \frac{ce^5}{92}.
+			\end{align*}
+
+			\prob Simplify
+			
+			\[\frac{9a^2}{10bc} \times \frac{12b}{6a^3}.\]
+
+			\solution
+			
+			\begin{align*}
+				\frac{9a^2}{10bc} \times \frac{12b}{6a^3} &= \frac{9a^2 \cdot 12b}{10bc \cdot 6a^3}\\
+				&= \frac{9}{5ac}.
+			\end{align*}
+
+		\subsection{Fraction Comparison}
+
+			\exmp \exmpword{(Fraction Comparison)} Compare \(11/432\) and \(23/900\). \(11/432 = 275/10800\). \(23/900 = 276/10800\). \(11/432 < 23/900\).
+
+		\subsection{Concepts of Fractions}
+
+			\defi \defiword{(Mixed Fraction)} e.g. \(7 \frac{2}{11}\).
+
+			\defi \defiword{(Vulger Fraction)} e.g. \(\frac{300}{40}\).
+
+			\exmp \exmpword{(Fractions)} Convert \(7 \frac{2}{11}\) into a vulger fraction. \(7 \frac{2}{11} = \frac{79}{11}\).
+
+			\exmp \exmpword{(Fractions)} Convert \(\frac{300}{40}\) into a mixed fraction. \(\frac{300}{40} = \frac{15}{2} = 7 \frac{1}{2}\).
+
+		\subsection{Percentages}
+
+			\prob Express \(32/73\) as a \(\%\).
+			
+			\solution \(32/73 = 43.836\%\).\newline
+
+			\prob Find \(17\%\) of \(453\).
+			
+			\solution\(453 \times 17\% = 77.01\).\newline
+
+			\prob Increase \(82\) by \(61\%\).
+			
+			\solution \(82 \times (1+61\%) = 132.02\).\newline
+
+			\prob A phone marked \(\pounds 370\) need to be reduced by \(15\%\). Find the now price.
+			
+			\solution \((1-15\%) \times \pounds 370 = \pounds 314.5\).\newline
+
+			\prob A coat priced at \(\pounds 120\) need a \(20\%\) sales tax to be added to the price. Find the new price.
+			
+			\solution \(\pounds 120 \times (1+20\%) = \pounds 144.\)\newline
+
+			\prob After a \(20\%\) tax has been added to a bag's price is \(\pounds 45\). Find the pre-tax price.
+			
+			\solution Let \(p\) be the pre-tax price. Therefore
+			
+			\[(1+20\%)p = \pounds 45,\]
+			
+			Simplify, we have \(p = \pounds 37.5\).\newline
+
+			\prob After a \(35\%\) discount a shop price is \(\pounds 795\). Find the previous price.
+			
+			\solution Let \(p\) be the previous price. Therefore
+			
+			\[(1-35\%)p = \pounds 795\]
+			
+			Simplify, we have \(p = \pounds 1223.08\).\newline
+
+			\prob \(\pounds 12000\) is invested in a \(2.75\%\) amount for 20 years.
+
+			Find the value at the end of the investment saving.
+
+			\solution
+
+			\begin{enumerate}[label=\methword{(\arabic*)}]
+				\item Single interest. \(\pounds 12000 \times 2.75\% = \pounds 330.\) \(\pounds 330 \times 20 = \pounds 6600.\) \(\pounds 12000 + \pounds 6600 = \pounds 18600\).
+    			\item Compound interest. \(\pounds 12000 \times (1+2.75\%)^{20} = \pounds 20645.141\).
+			\end{enumerate}
+
+			\prob A \(\$30, 000\) car depreciate at \(15\%\) per year. What is the value by 12 years?
+			
+			\solution \(\$30000 \times (1-15\%)^{12} = \$4267.253\).
+
+	\section{Standard Form}
+	
+		\defi \defiword{(Standard Form)} \(a\times 10^n, n \in \ZZ. 1 \leq \abs{a} < 10\).
+
+		\exmp \exmpword{(Standard Form)} Write \(280700\) in standard form. \(280700 = 2.807 \times 10^5\).
+
+		\exmp \exmpword{(Standard Form)} Write \(7.09 \times 10^{-5}\) as a half decimal. \(7.09 \times 10^{-5} = 0.0000709\).\newline
+
+		\prob Simplify \(4.7 \times 10^8 + 9.4 \times 10^8\)
+		
+		\solution
+		
+		\begin{align*}
+			4.7 \times 10^8 + 9.4 \times 10^8 &= 14.1 \times 10^8\\
+			&= 1.41 \times 10^9.
+		\end{align*}
+
+		\prob Simplify \(4.07 \times 10^5 - 2.1 \times 10^4\)
+		
+		\solution
+
+		\begin{align*}
+			4.07 \times 10^5 - 2.1 \times 10^4 &= 4.07 \times 10^5 - 0.21 \times 10^5\\
+			&= 3.86 \times 10^5.
+		\end{align*}
+
+		\prob Simplify \(5 \times 10^6 \times 9 \times 10^{-3}\). 
+		
+		\solution
+		
+		\begin{align*}
+			5 \times 10^6 \times 9 \times 10^{-3} &= 45 \times 10^{3}\\
+			&= 4.5 \times 10^{4}.
+		\end{align*}
+
+		\prob Simplify \(1.6 \times 10^5 \div (2.4 \times 10^{-7})\).
+		
+		\solution
+		
+		\begin{align*}
+			1.6 \times 10^5 \div (2.4 \times 10^{-7}) &= 0.667 \times 10^{12}\\
+			&= 6.67 \times 10^{11}.
+		\end{align*}
+
+	\section{Tax Rates}
+
+		\exmp \exmpword{(UK Tax Rates)}
+
+		\begin{center}
+			\begin{tabular}{c|c}
+				Parts & Tax Rate\\
+				\hline
+				\hline
+				Up to \(\pounds 12570\) & No Tax\\
+				\(\pounds 12570\) to \(\pounds 37700\) & \(20\%\) Tax\\
+				\(\pounds 37700\) to \(\pounds 150000\) & \(40\%\) Tax\\
+				\(\pounds 150000-\) & \(45\%\) Tax
+			\end{tabular}
+		\end{center}
+
+		\exmp \exmpword{(Tax Rates)} For \(\pounds 12000\), no tax.
+
+		\exmp \exmpword{(Tax Rates)} For \(\pounds 13000\), no tax on \(\pounds 12570\), \(20\% \times (\pounds 13000-\pounds 12570) = \pounds 86\) tax.\newline
+
+		\prob For \(\pounds 36570\), calculate the tax.
+		
+		\solution \(\pounds 24000 \times 0.2 = \pounds 4800\).\newline
+
+		\prob For \(\pounds 80000\), calculate the tax.
+		
+		\solution \(\pounds 25200 \times 0.2 + \pounds 42300 \times 0.4 = \pounds 21960\).\newline
+
+		\prob For \(\pounds 200000\), calculate the tax.
+		
+		\solution \(\pounds 25200 \times 0.2 + \pounds 112300 \times 0.4 + \pounds 50000 \times 0.45 = \pounds 72460\).
+
+\end{document}

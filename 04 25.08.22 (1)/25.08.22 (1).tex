@@ -1,0 +1,136 @@
+%!TEX TX-program = xelatex
+%
+%%%%%%%%%%%%%%%%%%%%
+%
+% Title: GCSE Mathematics & Additional Mathematics for 25.08.22 (1)
+% Author: Eason Shao, Mr Finch-Noyes
+% Date: 25.08.22 (1)
+% Institude: Oxford International College
+% Email: eason.syc@icloud.com; yicheng_shao@oxcoll.com
+% GitHub: https://github.com/EasonSYC
+% GitHub Repository: N/A
+%
+%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[8pt]{article}
+\usepackage{../allan-eason}
+\usepackage{siunitx}
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+
+\graphicspath{ {./images/} }
+
+\newcommand{\Date}{25.08.22 (1)}
+\newcommand{\Name}{Mathematics}
+\newcommand{\Title}{\textcolor{allandarkblue}{\Name}\ \textcolor{allancyan}{\Date}\ Notes}
+
+\newcommand{\Author}{Eason Shao, Mr Finch-Noyes}
+
+\author{\Author}
+\title{\Title}
+\date{\Date}
+
+\geometry{a4paper, scale=0.8}
+
+\lhead{\Title}
+
+\begin{document}
+
+	\maketitle
+
+	\tableofcontents
+
+	\section{Sets}
+
+		\prob In a group of \(20\) students, \(12\) study History, \(10\) study Geography, \(3\) study neither. How many study both?
+
+		\solution Let \(x\) be the number of students who study both History and Geography. According to the \defiword{Inclusion-Exclusion Principle}
+
+		\[\mathrm{n} (A\cup B) = \mathrm{n} (A) + \mathrm{n}(B) - \mathrm{n} (A \cap B),\]
+
+		where \(\mathrm{n} (A \cup B) = 20 - 3 = 17, \mathrm{n}(A) = 12, \mathrm{n}(B) = 10, \mathrm{n}(A \cap B) = x\).
+
+		Simplify, we have
+
+		\[17 = 12 + 10 - x,\]
+
+		therefore we have \(x = 5\), which means \(5\) people study both.\newline
+
+		\defi \defiword{(Set Builder Notation)} The notation \(A = \left\{x: P\right\}\) means that the set \(A\) includes and only includes all possible \(x\) which satisfies \(P\).
+
+		\exmp \exmpword{(Set Builder Notation)} What does \(\left\{x: 1 \leq x \leq 6, x \in \NN\right\}\) mean? All values (a set). How is it different to \(x \in \{1, 2, 3, 4, 5, 6\}\)? One value of \(x\).\newline
+
+		\prob What is the difference between \(\left\{x: 1 < x < 2\right\}\) and \(x \in (1, 2)\)?
+
+		\solution The first one is all possible values, while the second one is a notation which means a single \(x\) is within the interval \((1, 2)\).\newline
+
+		\exmp \exmpword{(Set of Points)} Find the equation of the following line. Describe the set of coordinates of points on this line in set build notation.
+
+		\[
+		\begin{tikzpicture}
+			\draw[black, ->] (-1, 0)--(8, 0) node[below] {\(x\)};
+			\draw[black, ->] (0, -1)--(0, 5) node[right] {\(y\)};
+			\draw[black] (-2, 4)--(0, 3)--(6, 0)--(8, -1) node at (0, 3) [anchor = south west] {\((0, 3)\)} node at (6, 0) [anchor = north east] {\((6, 0)\)};
+		\end{tikzpicture}
+		\]
+
+		The line is \(y = -\frac{1}{3}x + 3\); the set will be \(\left\{(x, y): y = -\frac{1}{3}x + 3\right\}\).
+
+	\section{Unit Conversion}
+		\subsection{General Unit Conversion}
+			\exmp \exmpword{(Unit Conversion, Length)} \(\qty{1}{\metre} = \qty{1e2}{\cm} = \qty{1e3}{\mm}\).
+			
+			\exmp \exmpword{(Unit Conversion, Squared, Hectares)} \(\qty{1}{\metre\squared} = \qty{1e4}{\cm\squared} = \qty{1e6}{\mm\squared} = \qty{1e-4}{\hectare}\).
+			
+			\exmp \exmpword{(Unit Conversion, Cubed)} \(\qty{1}{\metre\cubed} = \qty{1e6}{\cm\cubed} = \qty{1e9}{\mm\cubed}\).
+
+			\exmp \exmpword{(Unit Conversion, Km)} \(\qty{1}{\km} = \qty{1e3}{\metre}\).
+
+			\exmp \exmpword{(Unit Conversion, Grams)} \(\qty{1}{\kg} = \qty{1e3}{\gram} = \qty{1e-3}{\tonne}\).
+
+			\exmp \exmpword{(Unit Conversion, Litres)} \(\qty{1}{\litre} = \qty{1e-3}{\metre\cubed} = \qty{1e3}{\milli\litre} \qty{1e2}{\centi\litre}\).
+
+		\subsection{Time Conversion}
+			\prob A plane leaves London at \(21:15\). It lands in Singapore at \(17:45\). Given Singapore is \(7\) hours ahead, find the flight time.
+
+			\solution \(21:15_{\text{London}} = 28:15_{\text{Singapore}} = 4:15_{\text{Singapore, +1}}\).
+			
+			\(17:45_{\text{Singapore}} - 4:15_{\text{Singapore} = 13:30}\). \(13\) hours and \(30\) minutes.
+
+		\subsection{Bounds}
+			\exmp \exmpword{(Significant Figures)} \(x = 47\) to \(2\) significant figures, so we have \(x \in [46.5, 47.5)\).
+
+			\defi \defiword{(Lower Bound)} The lower bound for the previous example is \(46.5\).
+
+			\defi \defiword{(Upper Bound)} The upper bound for the previous example is \(47.5\).\newline
+
+			\prob \(a = 23.10\) to \(2\) decimal points. Bounds.
+
+			\solution Lower bound is \(23.095\), upper bound is \(23.105\).\newline
+
+			\prob \(b=700\) to \(2\) significant figures. Bounds.
+
+			\solution Lower bound is \(695\), upper bound is \(705\).\newline
+
+			\prob State the upper and lower bounds of
+
+			\begin{enumerate}[label=\probword{(\arabic*)}]
+				\item \(a+b\);
+				
+				\solution Lower: \(23.095 + 695\); Upper: \(23.105 + 705\).
+
+				\item \(b-a\);
+				
+				\solution Lower: \(695 - 23.105\); Upper: \(705 - 23.095\).
+
+				\item \(ab\);
+				
+				\solution Lower: \(695 \times 23.095\); Upper: \(705 \times 23.105\).
+
+				\item \(\frac{b}{a}\).
+				
+				\solution Lower: \(695 / 23.105\); Upper: \(705 / 23.095\).
+			\end{enumerate}
+
+\end{document}

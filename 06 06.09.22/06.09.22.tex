@@ -1,0 +1,113 @@
+%!TEX TX-program = xelatex
+%
+%%%%%%%%%%%%%%%%%%%%
+%
+% Title: GCSE Mathematics & Additional Mathematics for 06.09.22
+% Author: Eason Shao, Mr Finch-Noyes
+% Date: 06.09.22
+% Institude: Oxford International College
+% Email: eason.syc@icloud.com; yicheng_shao@oxcoll.com
+% GitHub: https://github.com/EasonSYC
+% GitHub Repository: https://github.com/EasonSYC/GCSE-Maths-Notes
+%
+%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[8pt]{article}
+\usepackage{../allan-eason}
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+
+\graphicspath{ {./images/} }
+
+\newcommand{\Date}{06.09.22}
+\newcommand{\Name}{Mathematics}
+\newcommand{\Title}{\textcolor{allandarkblue}{\Name}\ \textcolor{allancyan}{\Date}\ Notes}
+
+\newcommand{\Author}{Eason Shao, Mr Finch-Noyes}
+
+\author{\Author}
+\title{\Title}
+\date{\Date}
+
+\geometry{a4paper, scale=0.8}
+
+\lhead{\Title}
+
+\begin{document}
+
+	\maketitle
+
+	\tableofcontents
+
+	\section{Proportion}
+
+		\defi \defiword{(Direct Proportion)} \(x\) and \(y\)are directly proportional states that \(y = kx\), using the symbol \(x \propto y\). Another term used is \(x\) and \(y\) \defiword{vary directly}.
+
+		\[
+			\begin{tikzpicture}
+				\draw[black, ->] (-1, 0)--(5, 0);
+				\draw[black, ->] (0, -1)--(0, 5);
+				\draw[black] (0, 0)--(4, 4);
+			\end{tikzpicture}
+		\]
+
+		Whatever we \(\times, \div\) \(y\) by, we do the same to \(x\).
+
+		\defi \defiword{(Inversely Proportion)} \(x\) and \(y\) are inversely proportional to \(y\) states that \(x \propto 1/y\), same as \(y = k/x\). Another term used is \(x\) and \(y\) \defiword{vary indirectly}.
+
+		\[
+			\begin{tikzpicture}
+				\draw[black, ->] (-1, 0)--(5, 0);
+				\draw[black, ->] (0, -1)--(0, 5);
+				\draw[black, domain = 0.25:4, samples = 1000] plot (\x, {1 / \x});
+			\end{tikzpicture}
+		\]
+
+		Whatever we \(\times y\) by, we do \(\div\) to \(x\).
+
+		Whatever we \(\div y\) by, we do \(\times\) to \(x\).
+
+		\exmp \exmpword{(Proportion)} \(6\) workers take \(20\) days to build \(15\) products. Fill in the table below: (Do assume that products is directly proportional to workers and days)
+
+		\begin{center}
+			\begin{tabular}{c|c|c}
+				Workers & Days & Products\\
+				\hline\hline
+				\(6\) & \(20\) & \(15\)\\
+				\hline
+				\(6\) & \(4\) & \exmpword{\(3\)}\\
+				\hline
+				\(16\) & \(20\) & \exmpword{\(40\)}\\
+				\hline
+				\(18\) & \(100\) & \exmpword{\(225\)}\\
+				\hline
+				\(2\) & \exmpword{\(60\)} & \(15\)\\
+				\hline
+				\exmpword{\(30\)} & \(4\) & \(15\)\\
+				\hline
+				\(30\) & \exmpword{\(16\)} & \(60\)\\
+				\hline
+				\exmpword{\(0.6\)} & \(40\) & \(3\)\\
+				\hline
+				\exmpword{\(4\)} & \(20\) & \(10\)\\
+				\hline
+				\exmpword{\(1.2\)} & \(20\) & \(3\)\\
+				\hline
+				\(6\) & \(10\) & \exmpword{\(7.5\)}\\
+			\end{tabular}
+		\end{center}
+
+	\prob The square root of \(a\) or \(\sqrt{a}\) is inversely proportional to \(b^3\). When \(a=16\), \(b=10\).
+
+	\begin{enumerate}[label=\probword{(\arabic*)}]
+		\item Find an equation linking \(a\) and \(b\).
+		
+		\solution \(\sqrt{a} \propto b^{-3}\), therefore \(a \propto b^{-6}\). \(a = k \times b^{-6},\) and \(16 = k \times 10^{-6}\). Therefore \(k = 1.6 \times 10^7\) and \(a = 1.6 \times 10^7 b^{-6}\).
+
+		\item Find \(b\) when \(a=36\).
+		
+		\solution Too difficult to calculate, skipped.
+	\end{enumerate}
+
+\end{document}

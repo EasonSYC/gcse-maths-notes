@@ -1,0 +1,162 @@
+%!TEX TX-program = xelatex
+%
+%%%%%%%%%%%%%%%%%%%%
+%
+% Title: GCSE Mathematics & Additional Mathematics for 08.09.22 (1)
+% Author: Eason Shao, Mr Finch-Noyes
+% Date: 08.09.22 (1)
+% Institude: Oxford International College
+% Email: eason.syc@icloud.com; yicheng_shao@oxcoll.com
+% GitHub: https://github.com/EasonSYC
+% GitHub Repository: https://github.com/EasonSYC/GCSE-Maths-Notes
+%
+%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[8pt]{article}
+\usepackage{../allan-eason}
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+
+\graphicspath{ {./images/} }
+
+\newcommand{\Date}{08.09.22 (1)}
+\newcommand{\Name}{Mathematics}
+\newcommand{\Title}{\textcolor{allandarkblue}{\Name}\ \textcolor{allancyan}{\Date}\ Notes}
+
+\newcommand{\Author}{Eason Shao, Mr Finch-Noyes}
+
+\author{\Author}
+\title{\Title}
+\date{\Date}
+
+\geometry{a4paper, scale=0.8}
+
+\lhead{\Title}
+
+\begin{document}
+
+	\maketitle
+
+	\tableofcontents
+
+	\section{Index}
+		\exmp \exmpword{(Fraction Indicies)} \(3^4 = 3 \times 3 \times 3 \times 3 = 81, 9^{1/2} = \sqrt[2]{9} = 3, 2^{-3}=1/8, 100^{3/2}=1000, 32^{1/5} = \sqrt[5]{32} = 2, (2^3)^4 = 2^{3\times 4} = 2^{12} = 4096\).
+
+		\meth \methword{(P=Index Rules)}
+			\begin{enumerate}[label=\methword{(\arabic*)}]
+				\item \(a^m \times a^n = a^{m+n}\);
+				\item \(a^m \div a^n = a^{m-n}\);
+				\item \(a^{-n} = 1/a^n\);
+				\item \(a^0 = 1 (a \neq 0)\);
+				\item \((a^m)^n = a^{mn}\);
+				\item \(a^{1/n} = \sqrt[n]{a}\);
+				\item \(a^{m/n} = (\sqrt[n]{a})^m = \sqrt[n]{a^m}\).
+			\end{enumerate}
+
+		\exmp \exmpword{(Indicies)} \((3/2)^4 = (3^4 / 2^4) = 81 / 16\). 
+
+		\prob \probword{(Indicies Equations)}
+			\begin{enumerate}[label=\probword{(\arabic*)}]
+				\item \(2^{7x+2} \times 8^{3-2x} = 4^{x+1}\).
+				
+				\solution
+				\begin{align*}
+					2^{7x+2} \times 8^{3-2x} &= 4^{x+1}\\
+					2^{7x+2} \times 2^{9-6x} &= 2^{2x+2}\\
+					2^{7x+2+9-6x} &= 2^{2x+2}\\
+					7x+2+9-6x &= 2x+2\\
+					x &= 9.
+				\end{align*}
+
+				\item \(2^{7x+y} \times 3^{x-2y+2} = 12^{y-1}\).
+				
+				\solution
+				\begin{align*}
+					2^{7x+y} \times 3^{x-2y+2} &= 12^{y-1}\\
+					&= (2^2 \times 3)^{y-1}\\
+					2^{7x+y} \times 3^{x-2y+2} &= 2^{2y-2} \times 3^{y-1}\\
+					7x + y &= 2y - 2\\
+					x - 2y + 2 &= y - 1\\
+					x &= - 0.05\\
+					y &= 0.45.
+				\end{align*}
+
+			\end{enumerate}
+	
+	\section{Factorisasion}
+		\exmp \exmpword{(Number Factorisasion)} \(12 = 2^2 \times 3\).
+
+		\exmp \exmpword{(Algebraic Factorisasion)} \(15x - 10 = 5 (3x-2)\).
+
+		\prob Factorise \(6x^3 - 4x^5\).
+
+		\solution
+
+		\begin{align*}
+			6x^3 - 4x^5 &= 2x^3 (3 - 2x^2)\\
+			            &= 2x^3 (\sqrt{3} - \sqrt{2}x) (\sqrt{3} + \sqrt{2}x).
+		\end{align*}
+
+		\prob Factorize \(2x^2 y^3 z - 8 x y z^2 - 7 y^2 z^2\).
+
+		\solution
+
+		\begin{align*}
+			2x^2 y^3 z - 8 x y z^2 - 7 y^2 z^2 &= yz (2x^2 y^2 - 8xz - 7 yz).
+		\end{align*}
+
+		\prob Factorise \(2(x+10)^3 + y(x+10)^2\).
+
+		\solution
+
+		\begin{align*}
+			2(x+10)^3 + y(x+10)^2 &= (x+10)^2 (2x + y + 20).
+		\end{align*}
+
+	\section{Rearrangement}
+		\prob Rearrange to make \(x\) the subject: \(10x + a = -3x + 7\).
+
+		\solution \(x = (7-a)/13\).
+
+		\prob Rearrange ...: \(2/x = a/b\).
+
+		\solution \(x = 2b / a\).
+
+		\prob Rearrange ...: \((3x+c)/[d(x-5)]=2\).
+
+		\solution
+
+		\begin{align*}
+			\frac{3x+c}{d(x-5)} = 2\\
+			3x+c = 2dx - 10d\\
+			(3-2d) x = c-10d\\
+			x = \frac{c-10d}{3-2d}.
+		\end{align*}
+
+		\prob Rearrange ...: \(1 + \sqrt{4x-5} = 2d\).
+
+		\solution
+
+		\begin{align*}
+			1 + \sqrt{4x-5} = 2d\\
+			\sqrt{4x-5} = 2d - 1\\
+			4x-5 = 4d^2 - 4d + 1\\
+			x = d^2 - d + \frac{3}{2}.
+		\end{align*}
+
+		\prob Rearrange ...: \(2 - 7/(3x^2-1) = k\).
+
+		\solution
+
+		\begin{align*}
+			2 - \frac{7}{3x^2 - 1} = k\\
+			2 - k = \frac{7}{3x^2 - 1}\\
+			\frac{1}{2-k} = \frac{3x^2 - 1}{7}\\
+			3x^2 - 1 = \frac{7}{2-k}\\
+			3x^2 = \frac{9-k}{2-k}\\
+			x^2 = \frac{9-k}{6-3k}\\
+			x = \pm \sqrt{\frac{9-k}{6-3k}}.
+		\end{align*}
+
+\end{document}

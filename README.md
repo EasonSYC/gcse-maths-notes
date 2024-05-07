@@ -1,8 +1,8 @@
 # GCSE Maths Notes
 
-By EasonSYC
+By Eason Shao
 
-This is a project of my notes taken during GCSE Mathematics Courses in OIC.
+This is a project of my notes taken during GCSE Mathematics Courses at OIC.
 
 The sharing of this note is approved by the tutor of the lesson.
 
